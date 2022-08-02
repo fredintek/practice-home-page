@@ -35,7 +35,7 @@
     }
 
     &-right {
-      // border: 1px solid blue;
+      border: 1px solid blue;
 
       @media only screen and (max-width: 56.25em) {
         grid-column: 1/-1;
@@ -45,7 +45,6 @@
         margin-bottom: 2rem;
       }
       & img {
-        height: 100%;
         display: inline-block;
       }
     }

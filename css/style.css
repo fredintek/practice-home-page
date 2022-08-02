@@ -353,16 +353,17 @@ body.open-nav .mobile-nav {
     font-size: 1.6rem;
     line-height: 3.2rem;
     color: #2b2d42; }
-  @media only screen and (max-width: 56.25em) {
-    .about__content-right {
-      grid-column: 1/-1;
-      grid-row: 1/2;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2rem; } }
-  .about__content-right img {
-    height: 100%;
-    display: inline-block; }
+  .about__content-right {
+    border: 1px solid blue; }
+    @media only screen and (max-width: 56.25em) {
+      .about__content-right {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem; } }
+    .about__content-right img {
+      display: inline-block; }
 
 .project-section {
   margin-top: 10rem;
