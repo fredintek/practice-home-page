@@ -1,0 +1,136 @@
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__left {
+    flex: 1;
+
+    @media only screen and (max-width: 43.75em) {
+      text-align: center;
+    }
+
+    &-welcome {
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 2.4rem;
+      color: $color-black;
+      margin-bottom: 1rem;
+      opacity: 0;
+
+      @media only screen and (max-width: 43.75em) {
+        font-size: 2.8rem;
+      }
+
+      animation: fadeIn 800ms ease-in forwards;
+      animation-delay: 800ms;
+    }
+
+    &-heading {
+      font-family: "Montserrat";
+      font-weight: 800;
+      font-size: 3.6rem;
+      color: $color-black;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+
+      @media only screen and (max-width: 43.75em) {
+        font-size: 3.8rem;
+      }
+
+      animation: fadeRight 800ms ease-in forwards;
+      animation-delay: 1600ms;
+
+      & span {
+        color: $color-red;
+      }
+    }
+
+    &-btn-1,
+    &-btn-2 {
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 1.6rem;
+      opacity: 0;
+
+      animation: fadeUp 800ms ease-in forwards;
+    }
+
+    &-btn-1 {
+      color: $color-white;
+      margin-right: 2rem;
+      animation-delay: 1800ms;
+
+      @media only screen and (max-width: 43.75em) {
+        margin-right: 4rem;
+      }
+    }
+
+    &-btn-2 {
+      color: $color-black;
+      animation-delay: 2000ms;
+    }
+  }
+
+  &__right {
+    opacity: 0;
+    animation: fadeLeft 800ms ease-in forwards;
+    animation-delay: 2000ms;
+
+    @media only screen and (max-width: 43.75em) {
+      display: none;
+    }
+    & img {
+    }
+  }
+}
+
+.polygons {
+  &-img {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    animation-name: fadeIn, rotateFigure;
+    animation-duration: 800ms, 80s;
+    animation-timing-function: ease-in, linear;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 2200ms;
+    animation-fill-mode: forwards;
+
+    &-1 {
+      left: 30%;
+      top: 20%;
+    }
+
+    &-2 {
+      left: 45%;
+      top: 30%;
+      animation-delay: 2400ms;
+
+      @media only screen and (max-width: 43.75em) {
+        left: 55%;
+      }
+    }
+
+    &-3 {
+      left: 50%;
+      top: 45%;
+      animation-delay: 2600ms;
+
+      @media only screen and (max-width: 43.75em) {
+        left: 60%;
+      }
+    }
+  }
+}
+
+.illustration-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+}

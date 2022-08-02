@@ -1,0 +1,91 @@
+.nav-icon {
+  display: none;
+}
+
+.desktop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: $border-radius-nm;
+  box-shadow: $box-shadow-1;
+  padding: 0.5rem 0.5rem 0.5rem 3rem;
+  position: fixed;
+  // width: calc(115rem - 20rem);
+  width: calc(100% - 20rem);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  background-color: $color-white;
+  animation: fadeDown 800ms linear forwards;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+  z-index: 500;
+
+  @media only screen and(min-width:93.75em) {
+    width: 115rem;
+  }
+
+  @media only screen and(max-width:71.875em) {
+    width: calc(100% - 10rem);
+  }
+
+  @media only screen and(max-width:43.75em) {
+    width: calc(100% - 5rem);
+  }
+
+  @media only screen and(max-width:23.75em) {
+    // width: calc(100% - 10rem);
+    margin-right: 12%;
+    width: 80%;
+  }
+
+  &__logo {
+    & img {
+      @media only screen and (max-width: 43.75em) {
+        height: 2.8rem;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @media only screen and(max-width:56.25em) {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: relative;
+    transition: all 400ms ease;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: $color-black;
+  }
+
+  &__link.active::after {
+    content: "";
+    display: block;
+    background-color: $color-red;
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 2rem;
+  }
+
+  & .nav-icon {
+    display: none;
+    @media only screen and(max-width:56.25em) {
+      display: block;
+      font-size: 4rem;
+      color: $color-black;
+      margin-right: 1rem;
+    }
+  }
+}

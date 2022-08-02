@@ -1,0 +1,78 @@
+.contact-section {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  &__heading {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: $color-black;
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+  }
+
+  &__form {
+    // border: 1px solid blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 3.5rem;
+
+    @media only screen and (max-width: 43.75em) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__btn {
+    margin-top: 4rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: $color-black;
+    align-self: flex-start;
+
+    @media only screen and (max-width: 43.75em) {
+      align-self: center;
+    }
+  }
+}
+
+.form-group {
+  // border: 1px solid red;
+
+  &:last-of-type {
+    grid-column: 1/-1;
+  }
+}
+
+input[type="text"],
+input[type="email"] {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  color: $color-black;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  border-radius: $border-radius-nm;
+  border: $border;
+  box-shadow: $box-shadow-1;
+
+  &::placeholder {
+    opacity: 0.6;
+  }
+}
+
+textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  padding: 1.5rem 3rem;
+  line-height: 1.5;
+  width: 100%;
+  border: $border;
+  border-radius: $border-radius-nm;
+  box-shadow: $box-shadow-1;
+  resize: none;
+}

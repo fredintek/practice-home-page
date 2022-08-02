@@ -1,0 +1,13 @@
+.btn {
+  display: inline-block;
+  padding: 1.4rem 3rem;
+  border-radius: $border-radius-nm;
+
+  &-cyan {
+    background-color: $color-cyan;
+  }
+
+  &-red {
+    background-color: $color-red;
+  }
+}

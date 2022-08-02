@@ -1,0 +1,53 @@
+.about-section {
+  margin-top: 10rem;
+  width: 100%;
+}
+
+.about {
+  &__heading {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: $color-black;
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr max-content;
+    column-gap: 3rem;
+    align-items: center;
+
+    @media only screen and (max-width: 56.25em) {
+      grid-template-columns: 1fr;
+    }
+
+    &-left {
+      & p {
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 3.2rem;
+        color: $color-black;
+      }
+    }
+
+    &-right {
+      // border: 1px solid blue;
+
+      @media only screen and (max-width: 56.25em) {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+      & img {
+        height: 100%;
+        display: inline-block;
+      }
+    }
+  }
+}
